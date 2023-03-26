@@ -40,7 +40,7 @@ const paths = {
   styles: {
     src: 'app/assets/scss/**/*.scss',
     dest: 'dist/assets/css',
-    destWp: 'wp/wp-content/themes/**/assets/css'
+    destWp: 'wp/assets/css'
   },
 
   scripts: {
@@ -51,19 +51,19 @@ const paths = {
       'app/assets/js/main.js'
     ],
     dest: 'dist/assets/js',
-    destWp: 'wp/wp-content/themes/**/assets/js'
+    destWp: 'wp/assets/js'
   },
 
   images: {
     src: 'app/assets/img/**/*',
     dest: 'dist/assets/img',
-    destWp: 'wp/wp-content/themes/**/assets/img'
+    destWp: 'wp/assets/img'
   },
 
   font: {
     src: 'app/assets/font/**/*',
     dest: 'dist/assets/font',
-    destWp: 'wp/wp-content/themes/**/assets/font'
+    destWp: 'wp/assets/font'
   },
 
   njk: {
