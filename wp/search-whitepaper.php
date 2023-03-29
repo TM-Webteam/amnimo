@@ -11,8 +11,8 @@ $key = wp_specialchars($s, 1);
   <div class="breadcrumb">
     <ul class="breadcrumb-list">
       <li><a href="<?php echo esc_url(home_url()); ?>">産業用IoTのことならamnimo</a></li>
-      <li><a href="<?php echo esc_url(home_url()); ?>/column/">コラム</a></li>
-      <li>検索結果一覧2</li>
+      <li><a href="<?php echo esc_url(home_url()); ?>/whitepaper/">お役立ち資料</a></li>
+      <li>検索結果一覧</li>
     </ul>
   </div>
   <!-- .breadcrumb -->
@@ -21,38 +21,36 @@ $key = wp_specialchars($s, 1);
     <div class="containers flex">
 
       <!-- タクソノミー -->
-      <section class="main-conts article">
+      <section class="article relation-doc bg-W">
 
         <h1 class="article__ttl">「<span><?php echo $key; ?></span>」で検索した結果：<span><?php echo $wp_query->found_posts; ?></span> 件</h1>
 
         <div class="article__wrap">
 
           <?php if (have_posts()) : ?>
-
-            <?php
-            /* Start the Loop */
-            while (have_posts()) :
-              the_post();
-              $post_id = get_the_ID();
-              $post_terms = get_the_terms($post_id, 'column_category');
-            ?>
-
-              <a href="<?php the_permalink(); ?>" class="flex item">
-                <figure class="item__img"><?php the_post_thumbnail(); ?></figure>
-                <summary class="item__box">
-                  <h2 class="item__box--ttl"><?php the_title(); ?></h2>
-                  <div class="flex fS aiC gap10 item__box--row">
-                    <span class="time"><?php echo get_the_date('Y.m.d', $post_id); ?></span>
+            <div class="flex gap30 card">
+              <?php
+              /* Start the Loop */
+              while (have_posts()) :
+                the_post();
+                $post_id = get_the_ID();
+                $post_terms = get_the_terms($post_id, 'whitepaper_category');
+              ?>
+                <a href="<?php the_permalink(); ?>" class="card__box">
+                  <figure class="card__box--img"><?php the_post_thumbnail(); ?></figure>
+                  <div class="card__box--cat">
                     <?php if ($post_terms) : ?>
                       <?php foreach ($post_terms as $post_term) : ?>
                         <span class="cat"><?php echo esc_html($post_term->name); ?></span>
                       <?php endforeach; ?>
                     <?php endif; ?>
                   </div>
-                </summary>
-              </a>
+                  <h3 class="card__box--ttl"><?php the_title(); ?></h3>
+                  <div class="more small">ダウンロード</div>
+                </a>
 
-            <?php endwhile; ?>
+              <?php endwhile; ?>
+            </div>
           <?php else : ?>
 
             <p class="search_none_text">キーワードに一致するコンテンツは見つかりませんでした。他のキーワードをお試しください。</p>
@@ -87,7 +85,6 @@ $key = wp_specialchars($s, 1);
 
       </section>
 
-      <?php get_sidebar('column'); ?>
     </div>
   </section>
 

@@ -41,7 +41,7 @@ $taxonomy = get_terms($args);
       <div class="search">
         <form method="get" action="" class="search__form">
           <input name="s" class="search__input" type="search" placeholder="キーワードから探す">
-          <input type="hidden" name="post_type" value="column">
+          <input type="hidden" name="post_type" value="whitepaper">
           <button accesskey="f" class="search__btn" type="submit"><img src="<?php echo assets_path() ?>img/common/icon-search.svg"></button>
         </form>
       </div>

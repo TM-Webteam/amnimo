@@ -35,7 +35,7 @@
             <?php the_post_thumbnail(); ?>
           </picture>
           <div class="txt-box">
-            <p class="txt"><?php echo wp_kses(CFS()->get('lead'), $allowed_html); ?></p>
+            <p class="txt"><?php echo CFS()->get('lead'); ?></p>
           </div>
         </li>
       </ul>
@@ -45,9 +45,9 @@
       <?php if ($paragraph_arr) : ?>
         <dl class="flow-list">
           <?php foreach ($paragraph_arr as $paragraph) : ?>
-            <dt><?php echo wp_kses($paragraph['title'], $allowed_html); ?></dt>
+            <dt><?php echo $paragraph['title']; ?></dt>
             <dd>
-              <?php echo wp_kses($paragraph['comment'], $allowed_html); ?>
+              <?php echo $paragraph['comment']; ?>
             </dd>
           <?php endforeach; ?>
         </dl>

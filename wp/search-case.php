@@ -11,8 +11,8 @@ $key = wp_specialchars($s, 1);
   <div class="breadcrumb">
     <ul class="breadcrumb-list">
       <li><a href="<?php echo esc_url(home_url()); ?>">産業用IoTのことならamnimo</a></li>
-      <li><a href="<?php echo esc_url(home_url()); ?>/column/">コラム</a></li>
-      <li>検索結果一覧2</li>
+      <li><a href="<?php echo esc_url(home_url()); ?>/case/">導入事例・利用シーン</a></li>
+      <li>検索結果一覧</li>
     </ul>
   </div>
   <!-- .breadcrumb -->
@@ -34,7 +34,7 @@ $key = wp_specialchars($s, 1);
             while (have_posts()) :
               the_post();
               $post_id = get_the_ID();
-              $post_terms = get_the_terms($post_id, 'column_category');
+              $post_terms = get_the_terms($post_id, 'case_category');
             ?>
 
               <a href="<?php the_permalink(); ?>" class="flex item">
@@ -87,7 +87,7 @@ $key = wp_specialchars($s, 1);
 
       </section>
 
-      <?php get_sidebar('column'); ?>
+      <?php get_sidebar('case'); ?>
     </div>
   </section>
 

@@ -1,7 +1,10 @@
 <?php
+global $right_wp_bnr;
 $rec_wp = CFS()->get('rec_wp');
 $rec_column = CFS()->get('rec_column');
+$right_wp_bnr = CFS()->get('right_wp_bnr');
 ?>
+
 <?php get_header(); ?>
 
 <div id="container" class="sng-column">
@@ -29,7 +32,7 @@ $rec_column = CFS()->get('rec_column');
         <ul class="flex gap20 fS aiC sns-share">
           <li><a href="https://www.linkedin.com/sharing/share-offsite/?url=<?php echo get_the_permalink(); ?>" target="_blank" rel="nofollow noopener"><img src="<?php echo assets_path() ?>img/common/in.svg" alt="LinkedIn"></a></li>
           <li><a href="http://www.facebook.com/share.php?u=<?php echo get_the_permalink(); ?>" target="_blank" rel="nofollow noopener"><img src="<?php echo assets_path() ?>img/common/fb.svg" alt="Facebook"></a></li>
-          <li><a href="https://twitter.com/share?url=<?php echo get_the_permalink();?>&text=<?php echo get_the_title();?>" target="_blank" rel="nofollow noopener"><img src="<?php echo assets_path() ?>img/common/tw.svg" alt="Twitter"></a></li>
+          <li><a href="https://twitter.com/share?url=<?php echo get_the_permalink(); ?>&text=<?php echo get_the_title(); ?>" target="_blank" rel="nofollow noopener"><img src="<?php echo assets_path() ?>img/common/tw.svg" alt="Twitter"></a></li>
         </ul>
 
         <div class="single__lead"><?php echo wp_kses(CFS()->get('lead'), $allowed_html); ?></div>
@@ -75,13 +78,18 @@ $rec_column = CFS()->get('rec_column');
             $i2 = 0;
         ?>
             <h2 id="toc<?php echo $i; ?>" class="single__h2"><?php echo esc_html($paragraph['title']) ?></h2>
-            <div class="single__txt"><?php echo wp_kses($paragraph['comment'], $allowed_html); ?></div>
+            <div class="single__txt"><?php //echo wp_kses($paragraph['comment'], $allowed_html); 
+                                      ?>
+              <?php echo $paragraph['comment'];
+              ?></div>
             <?php foreach ((array)$paragraph['caption'] as $caption) :
               $i2++;
             ?>
               <h3 id="toc<?php echo $i; ?>-<?php echo $i2 ?>" class="single__h3"><?php echo esc_html($caption['caption_title']) ?></h3>
               <div class="single__txt">
-                <?php echo wp_kses_post($caption['caption_comment']) ?>
+                <?php //echo wp_kses_post($caption['caption_comment']); 
+                ?>
+                <?php echo $caption['caption_comment'] ?>
               </div>
             <?php endforeach ?>
         <?php endforeach;

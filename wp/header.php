@@ -106,7 +106,8 @@
               <li><a href="/service/iot_router/">IoTルーター（屋内版）</a></li>
               <li><a href="/service/iot_router_outdoor/">IoTルーター（屋外版）</a></li>
               <li><a href="/service/compact_router/">コンパクトルーター（屋内版）</a></li>
-              <li><a href="/service/compact_router_wifi/">【開発中】WiFi搭載コンパクトルーター</a></li>
+              <li><a href="/service/compact_router_wmpact_router_wifi/ifi/">【開発中】WiFi搭載コンパクトルーター（屋内版）</a></li>
+              <li><a href="/service/compact_routecompact_router_outdoor/r_outdoor/">【開発中】WiFi搭載コンパクトルーター（屋外版）</a></li>
               <li><a href="/service/ai_edge_gateway/">【開発中】AIエッジゲートウェイ</a></li>
               <li><a href="/service/remoteit/">remote.it</a></li>
               <li><a href="/service/vms/">ビデオマネジメントシステム(VMS)</a></li>
@@ -119,13 +120,13 @@
               <!-- <li><a href="/service/amnimo_sense/">amnimo sense</a></li> -->
             </ul><!-- /.child -->
           </li>
-          <li><a href="#">ニーズ・課題から探す</a>
+          <!-- <li><a href="#">ニーズ・課題から探す</a>
             <ul class="child">
               <li><a href="#">映像ソリューション（セキュリティ）</a></li>
               <li><a href="#">映像ソリューション（メンテナンス）</a></li>
               <li><a href="#">IoTソリューション</a></li>
-            </ul><!-- /.child -->
-          </li>
+            </ul>
+          </li> -->
           <li><a href="/news/">ニュース</a></li>
           <li><a href="/about/">会社概要</a></li>
           <li><a href="/case/">導入事例・利用シーン</a></li>

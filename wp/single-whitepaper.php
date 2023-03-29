@@ -64,8 +64,13 @@
       </article>
 
       <!-- サイドメニュー -->
-      <aside class="side-form">
-        <script type="text/javascript">var K3_acct = "amnimo";var K3_campcode = "iot_router_industrial_equipment";var K3_width = "auto";var K3_height = "auto";</script>
+      <aside class="side-form" id="form_tit">
+        <script type="text/javascript">
+          var K3_acct = "amnimo";
+          var K3_campcode = "<?php echo CFS()->get('form_id'); ?>";
+          var K3_width = "auto";
+          var K3_height = "auto";
+        </script>
         <script type="text/javascript" src="https://amo.amnimo.com/form/embed/"></script>
         <!-- カイロスタグ挿入 -->
         <!-- <form action="" class="form">

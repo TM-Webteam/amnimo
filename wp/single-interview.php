@@ -42,7 +42,7 @@
       <div class="cont-area innerwidth bg-white">
         <?php foreach ($paragraph_arr as $paragraph) : ?>
           <h4><?php echo wp_kses($paragraph['title'], $allowed_html); ?></h4>
-          <?php echo wp_kses($paragraph['comment'], $allowed_html); ?>
+          <?php echo $paragraph['comment']; ?>
         <?php endforeach; ?>
       <?php endif; ?>
       <div class="link-btn"><a href="/partners/interview/">パートナーの声トップ</a></div>

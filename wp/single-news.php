@@ -30,7 +30,9 @@ $post_terms = get_the_terms($post_id, $taxonomy_slug);
         </div>
         <div class="news-body">
           <div class="section">
-            <?php echo wp_kses(CFS()->get('comment'), $allowed_html); ?>
+            <?php //echo wp_kses(CFS()->get('comment'), $allowed_html); 
+            ?>
+            <?php echo CFS()->get('comment'); ?>
           </div>
         </div>
         <div class="link-btn"><a href="<?php echo esc_url(home_url()); ?>/news/">ニューストップ</a></div>

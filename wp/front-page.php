@@ -226,10 +226,20 @@
               <source media="(max-width: 640px)" srcset="<?php echo assets_path() ?>img/sources/service/share/sp-solution-bg18.jpg">
               <img src="<?php echo assets_path() ?>img/sources/service/share/solution-bg18.jpg" alt="" width="470" height="300">
             </picture>
-            <div class="ttl-box f80"><span>【開発中】</span>WiFi搭載<br>コンパクトルーター</div>
+            <div class="ttl-box f80"><span>【開発中】</span>コンパクトルーター<span>(WiFi搭載/屋内版)</span></div>
             <div class="txt-box">
               <p>WiFi搭載により多様な手段でIoT化を実現。高い信頼性で運用可能な低コストのLTE通信デバイスです。</p>
             </div>
+          </a>
+        </li>
+        <li class="cloud_vr">
+          <a href="/service/compact_router_outdoor/">
+            <picture>
+              <source media="(max-width: 640px)" srcset="<?php echo assets_path() ?>img/sources/service/share/sp-solution-bg19.png">
+              <img src="<?php echo assets_path() ?>img/sources/service/share/solution-bg19.png" alt="" width="470" height="300">
+            </picture>
+            <div class="ttl-box f80"><span>【開発中】</span>コンパクトルーター<span>(WiFi搭載/屋外版)</span></div>
+            <div class="txt-box"><p>屋外にそのまま設置可能な高い堅牢性を持つ、<span class="ib">PoE給電も可能なWiFi搭載型のLTEルーターです。</span></p></div>
           </a>
         </li>
         <li class="edge_ai">

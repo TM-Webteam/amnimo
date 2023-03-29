@@ -25,7 +25,8 @@
         <li class="indent"><a href="/service/iot_router_outdoor/">IoTルーター（屋外版）</a></li>
         <li class="indent"><a href="/service/ai_edge_gateway/">【開発中】AIエッジゲートウェイ</a></li>
         <li class="indent"><a href="/service/compact_router/">コンパクトルーター（屋内版）</a></li>
-        <li class="indent"><a href="/service/compact_router_wifi/">【開発中】WiFi搭載コンパクトルーター</a></li>
+        <li class="indent"><a href="/service/compact_router_wifi/" class="lh15">【開発中】WiFi搭載コンパクトルーター（屋内版）</a></li>
+        <li class="indent"><a href="/service/compact_router_outdoor/" class="lh15">【開発中】WiFi搭載コンパクトルーター（屋外版）</a></li>
         <li class="indent"><a href="/service/remoteit/">remote.it</a></li>
         <li class="indent"><a href="/service/vms/">ビデオマネジメントシステム(VMS)</a></li>
         <li class="indent"><a href="/service/dms/">デバイス管理システム</a></li>
