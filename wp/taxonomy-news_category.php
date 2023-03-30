@@ -25,8 +25,8 @@ $taxonomy = get_terms($args);
 
     <div class="wrap">
       <div class="sort-box">
-        <a href="<?php echo esc_url(home_url()); ?>/news/">
-          <p class="sort-btn"><span class="all">ALL</span></p>
+        <a href="<?php echo esc_url(home_url()); ?>/news/" class="sort-btn">
+          <span class="all">ALL</span>
         </a>
         <?php if (!empty($taxonomy)) : ?>
           <div class="btn-wrap">
@@ -36,10 +36,10 @@ $taxonomy = get_terms($args);
                 $active = " active";
               }
             ?>
-              <a href="<?php echo esc_url(get_term_link($category)); ?>">
-                <p class="sort-btn<?php echo $active; ?>"><span class="info"><?php echo esc_html($category->name); ?></span></p>
-              <?php endforeach; ?>
+              <a href="<?php echo esc_url(get_term_link($category)); ?>" class="sort-btn<?php echo $active; ?>">
+                <span class="info"><?php echo esc_html($category->name); ?></span>
               </a>
+            <?php endforeach; ?>
           </div>
         <?php endif; ?>
       </div>

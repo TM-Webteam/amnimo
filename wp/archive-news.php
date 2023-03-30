@@ -71,14 +71,14 @@ $taxonomy = get_terms($args);
         <?php if (!empty($taxonomy)) : ?>
           <div class="btn-wrap">
             <?php foreach ($taxonomy as $category) : ?>
-              <a href="<?php echo esc_url(get_term_link($category)); ?>">
-                <p class="sort-btn"><span class="info"><?php echo esc_html($category->name); ?></span></p>
-              <?php endforeach; ?>
+              <a href="<?php echo esc_url(get_term_link($category)); ?>" class="sort-btn">
+                <span class="info"><?php echo esc_html($category->name); ?></span>
               </a>
+            <?php endforeach; ?>
           </div>
         <?php endif; ?>
       </div>
-      <div class="sort-box">
+      <!-- <div class="sort-box">
         <p class="sort-btn active"><span class="all">ALL</span></p>
         <div class="btn-wrap">
           <p class="sort-btn"><span class="info">お知らせ</span></p>
@@ -86,7 +86,7 @@ $taxonomy = get_terms($args);
           <p class="sort-btn"><span class="report">イベント・セミナー</span></p>
           <p class="sort-btn"><span class="media">メディア掲載</span></p>
         </div>
-      </div>
+      </div> -->
       <?php
       $paged = get_query_var('paged') ? get_query_var('paged') : 1;
       $args = array(
