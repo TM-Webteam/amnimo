@@ -12,7 +12,7 @@ $right_wp_bnr = CFS()->get('right_wp_bnr');
   <div class="breadcrumb">
     <ul class="breadcrumb-list">
       <li><a href="<?php echo esc_url(home_url()); ?>">産業用IoTのことならamnimo</a></li>
-      <li><a href="<?php echo esc_url(home_url()); ?>/whitepaper/">コラム</a></li>
+      <li><a href="<?php echo esc_url(home_url()); ?>/column/">コラム</a></li>
       <li><?php echo strip_tags(get_the_title()); ?></li>
     </ul>
   </div>
@@ -27,6 +27,7 @@ $right_wp_bnr = CFS()->get('right_wp_bnr');
         <h1 class="single__h1"><?php the_title(); ?></h1>
 
         <!-- <div class="single__time"><span class="time">2023.02.22</span></div> -->
+        <div class="single__lead"><?php the_post_thumbnail(); ?></div>
 
         <!-- SNSシェアボタン -->
         <ul class="flex gap20 fS aiC sns-share">
