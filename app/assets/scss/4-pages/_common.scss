@@ -5455,3 +5455,29 @@ i.c-icon {
 .lh15 {
   line-height: 1.5;
 }
+
+.link-btn-blue {
+  text-align: center;
+  margin: 49px auto;
+  a {
+    background: #10069f;
+    color: #FFF;
+    border: 1px solid #FFF;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    padding: 1.7em 1.2em;
+    font-size: 0.9em;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+    line-height: 1.5;
+    &:hover {
+      opacity: 1;
+      background: #FFF;
+      color: #10069f;
+      border: 1px solid #10069f;
+    }
+  }
+}
