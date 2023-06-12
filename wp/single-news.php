@@ -1,4 +1,5 @@
 <?php
+$post_id = $post->ID;
 $taxonomy_slug = "news_category";
 $post_terms = get_the_terms($post_id, $taxonomy_slug);
 ?>

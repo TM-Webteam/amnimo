@@ -83,16 +83,18 @@ $right_wp_bnr = CFS()->get('right_wp_bnr');
                                       ?>
               <?php echo $paragraph['comment'];
               ?></div>
-            <?php foreach ((array)$paragraph['caption'] as $caption) :
-              $i2++;
-            ?>
-              <h3 id="toc<?php echo $i; ?>-<?php echo $i2 ?>" class="single__h3"><?php echo esc_html($caption['caption_title']) ?></h3>
-              <div class="single__txt">
-                <?php //echo wp_kses_post($caption['caption_comment']); 
-                ?>
-                <?php echo $caption['caption_comment'] ?>
-              </div>
-            <?php endforeach ?>
+            <?php if (!empty($paragraph['caption'])) : ?>
+              <?php foreach ((array)$paragraph['caption'] as $caption) :
+                $i2++;
+              ?>
+                <h3 id="toc<?php echo $i; ?>-<?php echo $i2 ?>" class="single__h3"><?php echo esc_html($caption['caption_title']) ?></h3>
+                <div class="single__txt">
+                  <?php //echo wp_kses_post($caption['caption_comment']); 
+                  ?>
+                  <?php echo $caption['caption_comment'] ?>
+                </div>
+              <?php endforeach ?>
+            <?php endif; ?>
         <?php endforeach;
         endif; ?>
 

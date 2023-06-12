@@ -239,7 +239,9 @@
               <img src="<?php echo assets_path() ?>img/sources/service/share/solution-bg19.png" alt="" width="470" height="300">
             </picture>
             <div class="ttl-box f80"><span>【開発中】</span>コンパクトルーター<span>(WiFi搭載/屋外版)</span></div>
-            <div class="txt-box"><p>屋外にそのまま設置可能な高い堅牢性を持つ、<span class="ib">PoE給電も可能なWiFi搭載型のLTEルーターです。</span></p></div>
+            <div class="txt-box">
+              <p>屋外にそのまま設置可能な高い堅牢性を持つ、<span class="ib">PoE給電も可能なWiFi搭載型のLTEルーターです。</span></p>
+            </div>
           </a>
         </li>
         <li class="edge_ai">

@@ -59,6 +59,7 @@
         <li class="pc"><a href="https://amnimo.com/terms/ja/privacy.html" class="blank" target="_blank">個人情報保護方針</a></li>
         <!-- <li class="pc"><a href="https://amnimo.com/terms/ja/specified_commercial_transaction.html" class="blank" target="_blank">特定商取引法に基づく表記</a></li> -->
         <li><a href="/sitemap/">サイトマップ</a></li>
+        <li><a href="/cookie_policy/">cookieポリシー</a></li>
       </ul><!-- /.clm -->
     </div><!-- /.ftr-nav -->
 

@@ -1,5 +1,6 @@
 <?php
 global $right_wp_bnr;
+$post_id = $post->ID;
 $taxonomy_slug = "case_category";
 $post_terms = get_the_terms($post_id, $taxonomy_slug);
 $case_type_arr = CFS()->get('case_type');
@@ -62,7 +63,7 @@ $right_wp_bnr = CFS()->get('right_wp_bnr');
             <div class="single__txt"><?php echo esc_html(CFS()->get('usage')); ?></div>
           </div>
 
-          
+
           <?php $paragraph_arr = CFS()->get('effect'); ?>
           <?php if (!empty($paragraph_arr)) : ?>
             <dl class="single__dl">
