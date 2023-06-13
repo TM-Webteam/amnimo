@@ -19,14 +19,19 @@ ul {
 	width: 1200px;
 } */
 body {
-    position: relative;
-    color: #000;
-    min-width: 1200px;
-    letter-spacing: 0.04em;
-    line-height: 2;
-    font-size: 16px;
-    font-family: "Noto Sans Japanese", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-    font-weight: 400;
+  position: relative;
+  color: #10069f;
+  letter-spacing: 0.04em;
+  line-height: 2;
+  font-size: 16px;
+  font-family: "Noto Sans Japanese", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-weight: 300;
+}
+
+@media (max-width:768px) {
+  body {
+    font-size: 14px;
+  }
 }
 
 .pagetop {
@@ -106,9 +111,9 @@ a:focus, a:hover {
 } */
 
 .cookie_policy .mv-block {
-  text-align: center;
-  background: #333;
   padding: 60px 30px;
+  max-width: 1060px;
+  margin: 0 auto;
 }
 
 @media (max-width:768px) {
@@ -118,23 +123,29 @@ a:focus, a:hover {
 }
 
 .cookie_policy .containers {
-  max-width: 1260px;
+  max-width: 1060px;
   width: 100%;
   margin: 0 auto;
-  padding: 80px 30px;
+  padding: 0 30px 80px;
 }
 
 @media (max-width:768px) {
   .cookie_policy .containers {
-    padding: 40px 15px;
+    padding: 0 15px 40px;
   }
 }
 
 .cookie_policy .mv-block .lower-ttl-primary {
   margin-bottom: 0;
-  font-size: 2.625em;
-  color: #fff;
+  font-size: 49px;
   line-height: 1.476;
+  font-weight: 200;
+}
+
+@media (max-width:768px) {
+  .cookie_policy .mv-block .lower-ttl-primary {
+    font-size: 2em;
+  }
 }
 .cookie_policy__box {
   line-height: 1.8;
@@ -164,10 +175,12 @@ a:focus, a:hover {
 .cookie_policy__box dl dt {
   font-weight: 700;
   margin-bottom: 10px;
+  font-size: 18px;
 }
 @media (max-width:768px){
   .cookie_policy__box dl dt {
     margin-bottom: 10px;
+    font-size: 14px;
   }
 }
 .cookie_policy__box dl dt:before {
@@ -194,10 +207,27 @@ a:focus, a:hover {
   opacity: 1;
   text-decoration: none;
 }
-.cookie_policy__box dl dd table col {
-  width: 30%;
+.cookie_policy__box dl dd table {
+  width: 100%;
 }
-.cookie_policy__box dl dd table col:last-child {
+@media (max-width:768px) {
+  .cookie_policy__box dl dd table {
+    width: 1000px;
+  }
+}
+
+.cookie_policy__box dl dd table.menu01 col {
+  width: 15%;
+}
+
+.cookie_policy__box dl dd table.menu01 col:last-child {
+  width: 55%;
+}
+.cookie_policy__box dl dd table.menu02 col {
+  width: 15%;
+}
+
+.cookie_policy__box dl dd table.menu02 col:last-child {
   width: 70%;
 }
 .cookie_policy__box dl dd table td,
@@ -206,13 +236,24 @@ a:focus, a:hover {
   border: 1px solid #ccc;
 }
 .cookie_policy__box dl dd table th {
-  background: #f1f1f1;
+  background: #edefef;
+  vertical-align: middle;
+}
+.cookie_policy__box dl dd table td:last-child {
+  word-break: break-all;
 }
 .cookie_policy_tit {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
   /* text-align: center; */
   margin: 30px 0;
+}
+
+@media (max-width:768px) {
+  .cookie_policy_tit {
+    font-size: 14px;
+    margin: 15px 0;
+  }
 }
 .mt40 {
   margin-top: 40px;

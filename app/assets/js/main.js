@@ -182,6 +182,20 @@ $(function(){
 });
 
 
+//--------------------------------------
+//　カイロス　確認画面遷移先修正
+//--------------------------------------
+
+(function($){
+  $(function(){
+    $('#frame_div > iframe').on('load',function(){
+      var frameHeight = $('#frame_div').height();
+      $(window).scrollTop(0);
+    });
+  });
+})(jQuery);
+
+
 
 $(function (){
 
