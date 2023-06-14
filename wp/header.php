@@ -121,9 +121,9 @@
           </li>
           <li><a href="#">ニーズ・課題から探す</a>
             <ul class="child">
-              <li><a href="#">映像ソリューション（セキュリティ）</a></li>
-              <li><a href="#">映像ソリューション（メンテナンス）</a></li>
-              <li><a href="#">IoTソリューション</a></li>
+              <li><a href="/video_solution_security/">映像ソリューション（セキュリティ）</a></li>
+              <li><a href="/video_solution_maintenance/">映像ソリューション（メンテナンス）</a></li>
+              <li><a href="/iot_solution/">IoTソリューション</a></li>
             </ul><!-- /.child -->
           </li>
           <li><a href="/news/">ニュース</a></li>
