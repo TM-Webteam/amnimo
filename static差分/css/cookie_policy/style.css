@@ -159,9 +159,7 @@ a:focus, a:hover {
     padding: 40px 15px 0;
   }
 }
-.cookie_policy__box div {
-  margin-bottom: 15px;
-}
+
 .cookie_policy__box dl {
   counter-reset: count;
 }
@@ -196,6 +194,9 @@ a:focus, a:hover {
 }
 .cookie_policy__box dl dd.pl3 {
   padding-left: 3em;
+}
+.cookie_policy__box dl dd.mb0 {
+  margin-bottom: 0;
 }
 .cookie_policy__box dl dd.pl2 {
   padding-left: 2em;
@@ -232,7 +233,7 @@ a:focus, a:hover {
 }
 .cookie_policy__box dl dd table td,
 .cookie_policy__box dl dd table th {
-  padding: 10px;
+  padding: 15px 10px;
   border: 1px solid #ccc;
 }
 .cookie_policy__box dl dd table th {
@@ -245,7 +246,6 @@ a:focus, a:hover {
 .cookie_policy_tit {
   font-weight: 700;
   font-size: 18px;
-  /* text-align: center; */
   margin: 30px 0;
 }
 
