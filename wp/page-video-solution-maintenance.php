@@ -58,7 +58,6 @@ get_header(); ?>
         </ul>
       </div>
     </section>
-  </section>
 
   <section class="video-solution--maintenance__problem">
     <div class="containers">
