@@ -25,7 +25,8 @@
         <li class="indent"><a href="/service/iot_router_outdoor/">IoTルーター（屋外版）</a></li>
         <li class="indent"><a href="/service/ai_edge_gateway/">【開発中】AIエッジゲートウェイ</a></li>
         <li class="indent"><a href="/service/compact_router/">コンパクトルーター（屋内版）</a></li>
-        <li class="indent"><a href="/service/compact_router_wifi/">【開発中】WiFi搭載コンパクトルーター</a></li>
+        <li class="indent"><a href="/service/compact_router_wifi/" class="lh15">【開発中】WiFi搭載コンパクトルーター（屋内版）</a></li>
+        <li class="indent"><a href="/service/compact_router_outdoor/" class="lh15">【開発中】WiFi搭載コンパクトルーター（屋外版）</a></li>
         <li class="indent"><a href="/service/remoteit/">remote.it</a></li>
         <li class="indent"><a href="/service/vms/">ビデオマネジメントシステム(VMS)</a></li>
         <li class="indent"><a href="/service/dms/">デバイス管理システム</a></li>
@@ -58,6 +59,7 @@
         <li class="pc"><a href="https://amnimo.com/terms/ja/privacy.html" class="blank" target="_blank">個人情報保護方針</a></li>
         <!-- <li class="pc"><a href="https://amnimo.com/terms/ja/specified_commercial_transaction.html" class="blank" target="_blank">特定商取引法に基づく表記</a></li> -->
         <li><a href="/sitemap/">サイトマップ</a></li>
+        <li><a href="/cookie_policy/">cookieポリシー</a></li>
       </ul><!-- /.clm -->
     </div><!-- /.ftr-nav -->
 

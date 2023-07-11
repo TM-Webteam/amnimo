@@ -5451,3 +5451,124 @@ i.c-icon {
     margin: 6vw 0 0;
   }
 }
+
+.lh15 {
+  line-height: 1.5;
+}
+
+.link-btn-blue {
+  text-align: center;
+  margin: 49px auto;
+  a {
+    background: #10069f;
+    color: #FFF;
+    border: 1px solid #FFF;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    padding: 1.7em 1.2em;
+    font-size: 0.9em;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+    line-height: 1.5;
+    &:hover {
+      opacity: 1;
+      background: #FFF;
+      color: #10069f;
+      border: 1px solid #10069f;
+    }
+  }
+}
+
+/*
+  ----------------
+  cookie_policy
+  ----------------
+*/
+
+.cookie_policy {
+
+  .lower-hero-sub {
+    .lower-ttl-primary {
+      margin-bottom: 0;
+    }
+  }
+  
+  &__box {
+    line-height: 1.8;
+    letter-spacing: 0.04em;
+    &:not(:last-child) {
+      .containers {
+        padding: 80px 30px 0;
+        @media #{$sp} {
+          padding: 40px 15px 0;
+        }
+      }
+    }
+    div {
+      margin-bottom: 15px;
+    }
+    dl {
+      counter-reset: count;
+      &.num-none {
+        counter-reset: none;
+        dt::before {
+          content: none;
+          counter-increment: none;
+        }
+      }
+      dt {
+        font-weight: bold;
+        margin-bottom: 10px;
+        @media #{$sp} {
+          margin-bottom: 10px;
+        }
+        &::before {
+          content: counter(count) ".";
+          counter-increment: count;
+        } 
+      }
+      dd {
+        padding-left: 1.5em;
+        margin-bottom: 10px;
+        span {
+          color: #bf3278;
+        }
+        &.pl3 {
+          padding-left: 3em;
+        }
+        &.pl2 {
+          padding-left: 2em;
+        }
+        a {
+          text-decoration: underline;
+          &:hover {
+            opacity: 1;
+            text-decoration: none;
+          } 
+        }
+        table {
+          col {
+            width: 30%;
+            &:last-child {
+              width: 70%;
+            }
+          }
+          th,td {
+            padding: 10px;
+            border: 1px solid #ccc;
+          }
+          th {
+            background: #f1f1f1;
+          }
+          td {
+            
+          }
+        }
+      }
+    }
+  }
+	
+}

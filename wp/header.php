@@ -56,70 +56,76 @@
   <link rel="stylesheet" href="<?php echo assets_path() ?>css/main.css">
   <?php wp_head(); ?>
 </head>
+<?php if (!empty($class)) : ?>
 
-<body <?php body_class($class); ?>>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RJ3BQK" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  </noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  <header id="global-header">
-    <div class="header-logo">
-      <picture class="logo-bg">
-        <source media="(max-width: 640px)" srcset="<?php echo assets_path() ?>img/sources/parts/sp-header-symbol.png">
-        <img alt="amnimo" src="<?php echo assets_path() ?>img/sources/parts/header-symbol.png" width="350" height="217">
-      </picture>
-      <h1>
-        <a class="close_class" href="/">
-          <img src="<?php echo assets_path() ?>img/sources/parts/amnimo-white-logo.svg" class="white" alt="産業用LTEゲートウェイamnimo" alt="amnimo" width="267" height="58">
-          <img src="<?php echo assets_path() ?>img/sources/parts/amnimo-color-logo.svg" class="color" alt="産業用LTEゲートウェイamnimo" alt="amnimo" width="267" height="58">
-        </a>
-      </h1>
-    </div>
-    <div id="menu-btn">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <nav class="header-nav sp-nav">
-      <div class="inner">
-        <ul class="menu-list menu01">
-          <li><a href="https://support.amnimo.com/hc/ja" target="_blank" class="blank">FAQ・サポート情報</a></li>
-          <li><a href="https://amnimo-partner.amnimo.com/hc/ja" target="_blank" class="blank">パートナーサイト</a></li>
-          <li><a href="https://apps.amnimo.com/#/signin" target="_blank" class="blank">サインイン</a></li>
-        </ul>
-        <div class="lang">
-          <div class="lang-inner">
-            <span class="jp"><a class="current">JP</a></span>
-            <span class="toggle-switch">
-              <input type="checkbox" id="toggle-lang" class="toggle-lang">
-              <label for="toggle-lang"></label>
-            </span>
-            <span class="en"><a>EN</a></span>
+  <body <?php body_class($class); ?>>
+  <?php else : ?>
+
+    <body <?php body_class(); ?>>
+    <?php endif; ?>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RJ3BQK" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header id="global-header">
+      <div class="header-logo">
+        <picture class="logo-bg">
+          <source media="(max-width: 640px)" srcset="<?php echo assets_path() ?>img/sources/parts/sp-header-symbol.png">
+          <img alt="amnimo" src="<?php echo assets_path() ?>img/sources/parts/header-symbol.png" width="350" height="217">
+        </picture>
+        <h1>
+          <a class="close_class" href="/">
+            <img src="<?php echo assets_path() ?>img/sources/parts/amnimo-white-logo.svg" class="white" alt="産業用LTEゲートウェイamnimo" alt="amnimo" width="267" height="58">
+            <img src="<?php echo assets_path() ?>img/sources/parts/amnimo-color-logo.svg" class="color" alt="産業用LTEゲートウェイamnimo" alt="amnimo" width="267" height="58">
+          </a>
+        </h1>
+      </div>
+      <div id="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="header-nav sp-nav">
+        <div class="inner">
+          <ul class="menu-list menu01">
+            <li><a href="https://support.amnimo.com/hc/ja" target="_blank" class="blank">FAQ・サポート情報</a></li>
+            <li><a href="https://amnimo-partner.amnimo.com/hc/ja" target="_blank" class="blank">パートナーサイト</a></li>
+            <li><a href="https://apps.amnimo.com/#/signin" target="_blank" class="blank">サインイン</a></li>
+          </ul>
+          <div class="lang">
+            <div class="lang-inner">
+              <span class="jp"><a class="current">JP</a></span>
+              <span class="toggle-switch">
+                <input type="checkbox" id="toggle-lang" class="toggle-lang">
+                <label for="toggle-lang"></label>
+              </span>
+              <span class="en"><a>EN</a></span>
+            </div>
           </div>
-        </div>
-        <ul class="menu-list menu02">
-          <li><a href="/service/">製品・サービス</a>
-            <ul class="child">
-              <li><a href="/service/edge_gateway/">エッジゲートウェイ（屋内版）</a></li>
-              <li><a href="/service/edge_gateway_outdoor/">エッジゲートウェイ（屋外版）</a></li>
-              <li><a href="/service/iot_router/">IoTルーター（屋内版）</a></li>
-              <li><a href="/service/iot_router_outdoor/">IoTルーター（屋外版）</a></li>
-              <li><a href="/service/compact_router/">コンパクトルーター（屋内版）</a></li>
-              <li><a href="/service/compact_router_wifi/">【開発中】WiFi搭載コンパクトルーター</a></li>
-              <li><a href="/service/ai_edge_gateway/">【開発中】AIエッジゲートウェイ</a></li>
-              <li><a href="/service/remoteit/">remote.it</a></li>
-              <li><a href="/service/vms/">ビデオマネジメントシステム(VMS)</a></li>
-              <li><a href="/service/dms/">デバイス管理システム</a></li>
-              <li><a href="/service/e_vms/">統合ビデオ管理システム</a></li>
-              <li><a href="/service/cloud_vr/">【開発中】クラウドビデオレコーダー</a></li>
-              <li><a href="/service/fuelcell_camera/">燃料電池型監視カメラソリューション</a></li>
+          <ul class="menu-list menu02">
+            <li><a href="/service/">製品・サービス</a>
+              <ul class="child">
+                <li><a href="/service/edge_gateway/">エッジゲートウェイ（屋内版）</a></li>
+                <li><a href="/service/edge_gateway_outdoor/">エッジゲートウェイ（屋外版）</a></li>
+                <li><a href="/service/iot_router/">IoTルーター（屋内版）</a></li>
+                <li><a href="/service/iot_router_outdoor/">IoTルーター（屋外版）</a></li>
+                <li><a href="/service/compact_router/">コンパクトルーター（屋内版）</a></li>
+                <li><a href="/service/compact_router_wmpact_router_wifi/ifi/">【開発中】WiFi搭載コンパクトルーター（屋内版）</a></li>
+                <li><a href="/service/compact_routecompact_router_outdoor/r_outdoor/">【開発中】WiFi搭載コンパクトルーター（屋外版）</a></li>
+                <li><a href="/service/ai_edge_gateway/">【開発中】AIエッジゲートウェイ</a></li>
+                <li><a href="/service/remoteit/">remote.it</a></li>
+                <li><a href="/service/vms/">ビデオマネジメントシステム(VMS)</a></li>
+                <li><a href="/service/dms/">デバイス管理システム</a></li>
+                <li><a href="/service/e_vms/">統合ビデオ管理システム</a></li>
+                <li><a href="/service/cloud_vr/">【開発中】クラウドビデオレコーダー</a></li>
+                <li><a href="/service/fuelcell_camera/">燃料電池型監視カメラソリューション</a></li>
 
-              <!--<li><a href="/service/wlm/">簡易無線水位計測サービス</a></li>-->
-              <!-- <li><a href="/service/amnimo_sense/">amnimo sense</a></li> -->
-            </ul><!-- /.child -->
-          </li>
-          <li><a href="#">ニーズ・課題から探す</a>
+                <!--<li><a href="/service/wlm/">簡易無線水位計測サービス</a></li>-->
+                <!-- <li><a href="/service/amnimo_sense/">amnimo sense</a></li> -->
+              </ul><!-- /.child -->
+            </li>
+            <!-- <li><a href="#">ニーズ・課題から探す</a>
             <ul class="child">
               <li><a href="/video_solution_security/">映像ソリューション（セキュリティ）</a></li>
               <li><a href="/video_solution_maintenance/">映像ソリューション（メンテナンス）</a></li>
@@ -150,11 +156,11 @@
               <li><a href="/contact/#doc">資料ダウンロード</a></li>
               <!-- <li><a href="/channel/">動画アーカイブ</a></li>
             <li><a href="/spec_manual/">仕様書・マニュアル</a></li> -->
-            </ul><!-- /.child -->
-          </li>
-          <li><a href="https://support.amnimo.com/hc/ja" target="_blank" class="blank">FAQ</a></li>
-        </ul>
-      </div><!-- /.inner -->
-    </nav>
-  </header>
-  <!-- /global-header -->
+              </ul><!-- /.child -->
+            </li>
+            <li><a href="https://support.amnimo.com/hc/ja" target="_blank" class="blank">FAQ</a></li>
+          </ul>
+        </div><!-- /.inner -->
+      </nav>
+    </header>
+    <!-- /global-header -->

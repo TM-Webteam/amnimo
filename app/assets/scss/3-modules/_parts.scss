@@ -305,6 +305,9 @@ ruby {
 
 .relation-doc {
   background: #F6F8F8;
+  &.bg-W {
+    background: #fff;
+  }
   .card {
     &__box {
       background: #fff;
@@ -518,7 +521,7 @@ ruby {
 .bnr-catalog {
   position: sticky;
   width: 300px;
-  top: 0;
+  top: 100px;
   @media #{$sp} {
     position: static;
     margin: 0 auto;

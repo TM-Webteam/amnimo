@@ -1,4 +1,6 @@
 <?php
+global $right_wp_bnr;
+$post_id = $post->ID;
 $taxonomy_slug = "case_category";
 $post_terms = get_the_terms($post_id, $taxonomy_slug);
 $case_type_arr = CFS()->get('case_type');
@@ -7,6 +9,7 @@ foreach ((array)$case_type_arr as $key => $val) {
 }
 $rec_wp = CFS()->get('rec_wp');
 $rec_case = CFS()->get('rec_case');
+$right_wp_bnr = CFS()->get('right_wp_bnr');
 ?>
 <?php get_header(); ?>
 
@@ -55,7 +58,12 @@ $rec_case = CFS()->get('rec_case');
             <div class="single__cat"><span class="cat">製品</span>　<?php echo esc_html(CFS()->get('product')); ?></div>
           </div>
 
-          <div class="single__txt taC"><?php echo esc_html(CFS()->get('usage')); ?></div>
+          <div class="flex fS aiC">
+            <div class="single__cat"><span class="cat">使用用途</span></div>
+            <div class="single__txt"><?php echo esc_html(CFS()->get('usage')); ?></div>
+          </div>
+
+
           <?php $paragraph_arr = CFS()->get('effect'); ?>
           <?php if (!empty($paragraph_arr)) : ?>
             <dl class="single__dl">
@@ -63,7 +71,7 @@ $rec_case = CFS()->get('rec_case');
               <dd>
                 <ul>
                   <?php foreach ($paragraph_arr as $paragraph) : ?>
-                    <li><?php echo wp_kses($paragraph['content'], $allowed_html); ?></li>
+                    <li><?php echo $paragraph['content']; ?></li>
                   <?php endforeach; ?>
                 </ul>
               </dd>
@@ -76,7 +84,7 @@ $rec_case = CFS()->get('rec_case');
               <dd>
                 <ul>
                   <?php foreach ($paragraph_arr as $paragraph) : ?>
-                    <li><?php echo wp_kses($paragraph['content'], $allowed_html); ?></li>
+                    <li><?php echo $paragraph['content']; ?></li>
                   <?php endforeach; ?>
                 </ul>
               </dd>
@@ -87,18 +95,18 @@ $rec_case = CFS()->get('rec_case');
         <?php if (!empty($paragraph_arr)) : ?>
           <?php foreach ($paragraph_arr as $paragraph) : ?>
             <?php if (!empty($paragraph['title'])) : ?>
-              <h2 class="single__h2"><?php echo wp_kses($paragraph['title'], $allowed_html); ?></h2>
+              <h2 class="single__h2"><?php echo $paragraph['title']; ?></h2>
             <?php endif; ?>
             <?php if (!empty($paragraph['comment'])) : ?>
-              <div class="single__txt"><?php echo wp_kses($paragraph['comment'], $allowed_html); ?></div>
+              <div class="single__txt"><?php echo $paragraph['comment']; ?></div>
             <?php endif; ?>
             <?php if (!empty($paragraph['caption'])) : ?>
               <?php foreach ($paragraph['caption'] as $caption) : ?>
                 <?php if (!empty($caption['caption_title'])) : ?>
-                  <h3 class="single__h3"><?php echo wp_kses($caption['caption_title'], $allowed_html); ?></h3>
+                  <h3 class="single__h3"><?php echo $caption['caption_title']; ?></h3>
                 <?php endif; ?>
                 <?php if (!empty($caption['caption_comment'])) : ?>
-                  <div class="single__txt"><?php echo wp_kses($caption['caption_comment'], $allowed_html); ?></div>
+                  <div class="single__txt"><?php echo $caption['caption_comment']; ?></div>
                 <?php endif; ?>
               <?php endforeach; ?>
             <?php endif; ?>

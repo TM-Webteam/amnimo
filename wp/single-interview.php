@@ -30,7 +30,7 @@
 
     <div class="innerwidth">
       <div class="head-area">
-        <h3>“<?php echo wp_kses($paragraph['lead'], $allowed_html); ?>”</h3>
+        <h3>“<?php echo wp_kses(CFS()->get('lead'), $allowed_html); ?>”</h3>
         <p class="name"><?php echo wp_kses(CFS()->get('company_name'), $allowed_html); ?></p><!-- /.align-r name -->
         <div class="topimg">
           <img src="<?php echo esc_url(CFS()->get('detail_image')); ?>" alt="<?php echo strip_tags(get_the_title()); ?>">
@@ -42,7 +42,7 @@
       <div class="cont-area innerwidth bg-white">
         <?php foreach ($paragraph_arr as $paragraph) : ?>
           <h4><?php echo wp_kses($paragraph['title'], $allowed_html); ?></h4>
-          <?php echo wp_kses($paragraph['comment'], $allowed_html); ?>
+          <?php echo $paragraph['comment']; ?>
         <?php endforeach; ?>
       <?php endif; ?>
       <div class="link-btn"><a href="/partners/interview/">パートナーの声トップ</a></div>

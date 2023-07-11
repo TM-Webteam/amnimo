@@ -12,82 +12,40 @@ $taxonomy = get_terms($args);
   <div class="breadcrumb">
     <ul class="breadcrumb-list">
       <li><a href="<a href=" <?php echo esc_url(home_url()); ?>">産業用IoTのことならamnimo</a></li>
-      <li>導入事例・利用シーン</li>
+      <li><a href="<?php echo esc_url(home_url()); ?>/news
+      /">ニュース</a></li>
+      <li><?php esc_html(single_cat_title()); ?></li>
     </ul>
   </div>
   <!-- .breadcrumb -->
-  <?php
-  $paged = get_query_var('paged') ? get_query_var('paged') : 1;
-  $args = array(
-    'posts_per_page' => -1,
-    'post_type' => 'news',
-    'paged' => $paged,
-    'order' => 'DESC',
-    'orderby' => 'post_date',
-    'post_status' => 'publish',
-    'meta_key' => 'mv_flg',
-    'meta_value' => '1'
-  );
-  $my_query = new WP_Query($args);
-  if ($my_query->have_posts()) :
-  ?>
-    <div class="mv-block">
-      <div class="slide-wrap">
-        <ul class="mv-slider">
-          <?php
-          while ($my_query->have_posts()) : $my_query->the_post();
-            $post_id = get_the_ID();
-            $post_terms = get_the_terms($post_id, 'news_category');
-            foreach ($post_terms as $post_term) {
-              $news_slug = $post_term->name;
-            }
-            $url = esc_url(CFS()->get('url'));
-          ?>
-            <li>
-              <?php if (!empty($url)) : ?>
-                <a href="<?php echo $url; ?>" target="_blank">
-                <?php else : ?>
-                  <a href="<?php the_permalink(); ?>">
-                  <?php endif; ?>
-                  <?php the_post_thumbnail(); ?>
-                  <p class="news-type"><span><?php echo $news_slug; ?></span></p>
-                  <p class="txt"><?php the_title(); ?></p>
-                  </a>
-            </li>
-          <?php endwhile; ?>
 
-        </ul>
-      </div>
-    </div>
-    <!-- .mv-block -->
-  <?php endif; ?>
 
   <div class="news-block">
-    <h3 class="block-title"><span>ニュース</span></h3>
+    <h3 class="block-title"><span><?php esc_html(single_cat_title()); ?>に関するニュース</span></h3>
 
     <div class="wrap">
       <div class="sort-box">
-        <p class="sort-btn active"><span class="all">ALL</span></p>
+        <a href="<?php echo esc_url(home_url()); ?>/news/" class="sort-btn">
+          <span class="all">ALL</span>
+        </a>
         <?php if (!empty($taxonomy)) : ?>
           <div class="btn-wrap">
-            <?php foreach ($taxonomy as $category) : ?>
-              <a href="<?php echo esc_url(get_term_link($category)); ?>" class="sort-btn">
+            <?php foreach ($taxonomy as $category) :
+              $active = "";
+              if ($term == $category->slug) {
+                $active = " active";
+              }
+            ?>
+              <a href="<?php echo esc_url(get_term_link($category)); ?>" class="sort-btn<?php echo $active; ?>">
                 <span class="info"><?php echo esc_html($category->name); ?></span>
               </a>
             <?php endforeach; ?>
           </div>
         <?php endif; ?>
       </div>
-      <!-- <div class="sort-box">
-        <p class="sort-btn active"><span class="all">ALL</span></p>
-        <div class="btn-wrap">
-          <p class="sort-btn"><span class="info">お知らせ</span></p>
-          <p class="sort-btn"><span class="pressrelease">プレスリリース</span></p>
-          <p class="sort-btn"><span class="report">イベント・セミナー</span></p>
-          <p class="sort-btn"><span class="media">メディア掲載</span></p>
-        </div>
-      </div> -->
       <?php
+      $queried_object = get_queried_object();
+      $term_id = esc_html($queried_object->term_id);
       $paged = get_query_var('paged') ? get_query_var('paged') : 1;
       $args = array(
         'posts_per_page' => 10,
@@ -96,6 +54,15 @@ $taxonomy = get_terms($args);
         'order' => 'DESC',
         'orderby' => 'post_date',
         'post_status' => 'publish',
+        'tax_query'  => array(
+          'relation'  => 'AND',
+          array(
+            'taxonomy' => 'news_category',
+            'field' => 'term_id',
+            'terms' => array($term_id),
+            'operator' => 'IN',
+          ),
+        ),
       );
       $the_query = new WP_Query($args);
       if ($the_query->have_posts()) :

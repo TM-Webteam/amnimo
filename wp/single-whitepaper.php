@@ -64,83 +64,16 @@
       </article>
 
       <!-- サイドメニュー -->
-      <aside class="side-form">
-        <script type="text/javascript">var K3_acct = "amnimo";var K3_campcode = "iot_router_industrial_equipment";var K3_width = "auto";var K3_height = "auto";</script>
-        <script type="text/javascript" src="https://amo.amnimo.com/form/embed/"></script>
-        <!-- カイロスタグ挿入 -->
-        <!-- <form action="" class="form">
-          <div class="form__ttl">ダウンロード申込みフォーム</div>
-          <div class="form__table">
-            <table>
-              <colgroup>
-                <col>
-                <col>
-              </colgroup>
-              <tbody>
-                <tr>
-                  <th class="flex aiC">
-                    <span class="item">会社名</span>
-                    <span class="required"></span>
-                  </th>
-                  <td><input type="text" placeholder="例）〇〇〇株式会社"></td>
-                </tr>
-                <tr>
-                  <th class="flex aiC">
-                    <span class="item">部署名</span>
-                    <span class="required"></span>
-                  </th>
-                  <td><input type="text" placeholder="例）〇〇〇部署"></td>
-                </tr>
-                <tr>
-                  <th class="flex aiC">
-                    <span class="item">ご担当者名</span>
-                    <span class="required"></span>
-                  </th>
-                  <td>
-                    <div class="flex aiC">
-                      <p class="flex fS aiC half"><span>氏：</span><input type="text" placeholder="例）佐藤"></p>
-                      <p class="flex fS aiC half"><span>名：</span><input type="text" placeholder="例）太郎"></p>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th class="flex aiC">
-                    <span class="item">メールアドレス</span>
-                    <span class="required"></span>
-                  </th>
-                  <td><input type="email" placeholder="例）sample@gmail.com.jp"></td>
-                </tr>
-                <tr>
-                  <th class="flex aiC">
-                    <span class="item">電話番号</span>
-                    <span class="required"></span>
-                  </th>
-                  <td><input type="tel" placeholder="例）090-1234-5678"></td>
-                </tr>
-                <tr>
-                  <th class="flex aiC">
-                    <span class="item">お問合せ・相談事項がある方<br class="pc-only">はご記入ください。</span>
-                    <span class="optional">任意</span>
-                  </th>
-                  <td><textarea placeholder="例）ダウンロード資料を見ながら説明もしてほしい。"></textarea></td>
-                </tr>
-                <tr>
-                  <th class="flex aiC">
-                    <span class="item">個人情報の取扱いについて</span>
-                    <span class="required"></span>
-                  </th>
-                  <td>
-                    <div class="flex fS aiC"><input type="checkbox">同意する</div>
-                    <p>弊社Webサイトの<a href="/privacy/">プライバシーポリシー</a>をご確認の上、ご同意いただき送信をお願いいたします。</p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <button type="submit" class="btn01 small">確認画面へ進む</button>
-          </div>
-        </form> -->
-        <!-- カイロスタグ挿入 end -->
-
+      <aside class="side-form" id="form_tit">
+        <div id="frame_div">
+          <script type="text/javascript">
+            var K3_acct = "amnimo";
+            var K3_campcode = "<?php echo CFS()->get('form_id'); ?>";
+            var K3_width = "auto";
+            var K3_height = "auto";
+          </script>
+          <script type="text/javascript" src="https://amo.amnimo.com/form/embed/"></script>
+        </div>
       </aside>
 
     </div>
