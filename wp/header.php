@@ -127,34 +127,34 @@
             </li>
             <!-- <li><a href="#">ニーズ・課題から探す</a>
             <ul class="child">
-              <li><a href="#">映像ソリューション（セキュリティ）</a></li>
-              <li><a href="#">映像ソリューション（メンテナンス）</a></li>
-              <li><a href="#">IoTソリューション</a></li>
-            </ul>
-          </li> -->
-            <li><a href="/news/">ニュース</a></li>
-            <li><a href="/about/">会社概要</a></li>
-            <li><a href="/case/">導入事例・利用シーン</a></li>
-            <li><a href="/partners/">パートナー紹介</a>
-              <ul class="child">
-                <li><a href="/partners/">パートナー紹介</a></li>
-                <li><a href="/interview/">パートナーの声</a></li>
-              </ul><!-- /.child -->
-            </li>
-            <li><a href="#">お役立ち情報</a>
-              <ul class="child">
-                <li><a href="/column/">コラム</a></li>
-                <li><a href="/whitepaper/">お役立ち資料</a></li>
-                <li><a href="/spec_manual/">仕様書・マニュアル</a></li>
-                <li><a href="/channel/">動画アーカイブ</a></li>
-              </ul><!-- /.child -->
-            </li>
-            <li><a href="/contact/">お問い合わせ</a>
-              <ul class="child r0">
-                <li><a href="/contact/">お問い合わせ</a></li>
-                <li><a href="https://amo.amnimo.com/form/estimate" class="blank" target="blank">お見積り依頼</a></li>
-                <li><a href="/contact/#doc">資料ダウンロード</a></li>
-                <!-- <li><a href="/channel/">動画アーカイブ</a></li>
+              <li><a href="/video_solution_security/">映像ソリューション（セキュリティ）</a></li>
+              <li><a href="/video_solution_maintenance/">映像ソリューション（メンテナンス）</a></li>
+              <li><a href="/iot_solution/">IoTソリューション</a></li>
+            </ul><!-- /.child -->
+          </li>
+          <li><a href="/news/">ニュース</a></li>
+          <li><a href="/about/">会社概要</a></li>
+          <li><a href="/case/">導入事例・利用シーン</a></li>
+          <li><a href="/partners/">パートナー紹介</a>
+            <ul class="child">
+              <li><a href="/partners/">パートナー紹介</a></li>
+              <li><a href="/interview/">パートナーの声</a></li>
+            </ul><!-- /.child -->
+          </li>
+          <li><a href="#">お役立ち情報</a>
+            <ul class="child">
+              <li><a href="/column/">コラム</a></li>
+              <li><a href="/whitepaper/">お役立ち資料</a></li>
+              <li><a href="/spec_manual/">仕様書・マニュアル</a></li>
+              <li><a href="/channel/">動画アーカイブ</a></li>
+            </ul><!-- /.child -->
+          </li>
+          <li><a href="/contact/">お問い合わせ</a>
+            <ul class="child r0">
+              <li><a href="/contact/">お問い合わせ</a></li>
+              <li><a href="https://amo.amnimo.com/form/estimate" class="blank" target="blank">お見積り依頼</a></li>
+              <li><a href="/contact/#doc">資料ダウンロード</a></li>
+              <!-- <li><a href="/channel/">動画アーカイブ</a></li>
             <li><a href="/spec_manual/">仕様書・マニュアル</a></li> -->
               </ul><!-- /.child -->
             </li>
